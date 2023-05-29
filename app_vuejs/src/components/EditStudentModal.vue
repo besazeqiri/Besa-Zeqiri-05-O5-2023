@@ -39,12 +39,15 @@
             <div class="form-group row">
               <label for="municipality" class="col-sm-4 col-form-label">Municipality</label>
               <div class="col-sm-6">
-                <input type="text" class="form-control" v-model="studentDetails.municipality">
-                <span v-if="errors.municipality" class="error">{{ errors.municipality }}</span>
+            <select v-model="studentDetails.municipality" class="form-select">
+                <option v-for="option in municipalities" :value="option.name">
+                      {{ option.name }}
+                </option>
+            </select>
+            <span v-if="errors.municipality" class="error">{{ errors.municipality }}</span>
               </div>
             </div>
           </div>
-
           <div class="modal-footer border">
             <div class="modal-buttons">
               <button class="btn btn-secondary m-2" @click="cancelEdit">Cancel</button>
@@ -58,6 +61,8 @@
 </template>
 
 <script>
+
+import { mapState } from 'vuex'
 export default {
   props: {
     student: {
@@ -102,6 +107,12 @@ export default {
 
   beforeMount() {
     this.studentDetails = { ...this.student };
+  },
+
+  computed:{
+     ...mapState({
+      municipalities: state => state.municipalities
+    }),
   }
 };
 </script>
@@ -136,7 +147,7 @@ export default {
 
 .modal-body {
   margin: 0;
-  padding: 20px 30px;
+  padding: 10px 10px;
 }
 
 .error {
@@ -148,7 +159,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 15px;
+  padding: 10px;
   background-color: #f5f5f5;
   text-align: right;
 }

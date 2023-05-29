@@ -10,6 +10,28 @@ export default new Vuex.Store({
     students: JSON.parse(localStorage.getItem("students")),
     archivedRecords: JSON.parse(localStorage.getItem("archivedRecords")),
     loggedUser: '',
+
+    municipalities: [
+      {
+        name: "Ferizaj",
+      },
+      {
+        name: "Prishtine",
+      },
+      {
+        name: "Gjilan",
+      },
+      {
+        name: "Prizren",
+      },
+      {
+        name: "Peje",
+      },
+      {
+        name: "Kamenice",
+      },
+
+    ],
   },
 
   getters: {

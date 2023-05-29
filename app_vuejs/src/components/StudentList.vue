@@ -67,7 +67,7 @@
 </template>
 
 <script>
-
+ 
 
 import AddStudentModal from '@/components/AddStudentModal.vue'
 import DeleteStudentModal from '@/components/DeleteStudentModal.vue'

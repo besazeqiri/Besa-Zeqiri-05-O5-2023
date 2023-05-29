@@ -18,10 +18,6 @@ const users = [
     username: "test",
     password: "test"
   },
-  {
-    username: "besa",
-    password: "123456789"
-  },
 ];
 localStorage.setItem("users", JSON.stringify(users));
 
@@ -31,43 +27,6 @@ const archivedRecords = [
 localStorage.setItem("archivedRecords", JSON.stringify(archivedRecords));
 
 const students = [
-  {
-    id: 1458,
-    name: 'Mergim Bajrami',
-    dob: '1989-10-05',
-    municipality: 'Prishtine',
-
-  },
-  {
-    id: 1452,
-    name: 'Blerton Rexha',
-    dob: '1989-10-05',
-    municipality: 'Prishtine',
-  },
-  {
-    id: 1461,
-    name: 'Abdullah Krasniqi',
-    dob: '1989-10-05',
-    municipality: 'Prishtine',
-  },
-  {
-    id: 1472,
-    name: 'Sami Salihu',
-    dob: '1989-10-06',
-    municipality: 'Ferizaj',
-  },
-  {
-    id: 1491,
-    name: 'Visar Uruqi',
-    dob: '1989-10-05',
-    municipality: 'Prishtine',
-  },
-  {
-    id: 1232,
-    name: 'Naim Krasniqi',
-    dob: '1989-10-05',
-    municipality: 'Prishtine',
-  },
   {
     id: 1441,
     name: 'Yllka Krasniqi',
